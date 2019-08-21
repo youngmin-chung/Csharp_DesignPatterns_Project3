@@ -1,8 +1,11 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          FormComponent.cs
- * Date:            August 19, 2019
+ * Date:            August 7, 2019
  * Author:          Youngmin Chung
+ * Summary:         the parent class of all the validator (decorator) classes and TextBox (the concrete component).
+ *                  FormComponents have names, their value from the user and InputState. If they do have a parent, they get it
+ *                  from the parent.
  * Description:     As AbstractColleague, FormComponent class...      
  *                  And here, we define a few variables, and the name. 
  *                  Then we assign the name to a private variable and the Constructor, 

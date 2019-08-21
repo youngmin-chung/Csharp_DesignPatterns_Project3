@@ -1,8 +1,10 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          InputState.cs
- * Date:            August 19, 2019
+ * Date:            August 7, 2019
  * Author:          Youngmin Chung
+ * Summary:         gets input from the user and sets the value of each form object (from its Context instance variable) to the input.
+ *                  Once it gets all the input, it sets the state to the done state.
  * Requirement:     Implement the State pattern with two states - "Entering Form Inputs" and "Done Form".
  *                  Your state should process user input
  * Description:     As ConcreateState, each subclass implements a behavior associated with a state of the Context      

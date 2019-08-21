@@ -1,8 +1,11 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          Program.cs
- * Date:            August 19, 2019
+ * Date:            August 7, 2019
  * Author:          Youngmin Chung
+ * Summary:         StateContext - Then sets the state to the InputState. 
+ *                  Also contains a Form instance variable and a getForm method that returns this variable.
+ *                  Main - adds empty form components to a Form object. Then calls the StateContext's run() method.
  * Requirement:     To properly program the State, you will need a second "Main" class outside your main method. 
  *                  Your main method should create a Main class and call a function on it; nothing else.
  * Description:     To properly program the State, you will need a second "Main" class outside your main method. 

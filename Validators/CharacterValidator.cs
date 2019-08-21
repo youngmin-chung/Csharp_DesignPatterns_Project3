@@ -1,11 +1,12 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          CharacterValidator.cs
- * Date:            August 19, 2019
+ * Date:            August 7, 2019
  * Author:          Youngmin Chung
+ * Summary:         there are the decorator classes. They inherit from FormComponent and their ConcreateComponent is TextBox
  * Requirement:     Your FormComponents should have Validator decorators. Each decorator is meant to change the form input's 
  *                  validation - for example, a MinLengthDecorator orHasCharacterDecorator, etc. would be good ideas.
- * Description:     As ConcreteColleague, CharacterValidator class do...
+ * Description:     As Decorator, CharacterValidator class do...
  *                  And here in the Constructor we pass in the name, 
  *                  and right below that we have the IsValid(), which valids out GetValue() contains string or not,
  */

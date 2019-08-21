@@ -1,8 +1,10 @@
 /*
  * Program:         Assi3.exe
  * Module:          Form.cs
- * Date:            August 19, 2019
+ * Date:            August 7, 2019
  * Author:          Youngmin Chung
+ * Summary:         maintains a list of form components. Also maintains a "print" method that just outputs the names and values
+ *                  of each FormComponent
  * Requirement:     Your Form should act as a mediator for its FormComponent colleagues. 
  *                  Because there is no interaction between FormComponent elements, 
  *                  the Mediator/Form will basically just be a list of FormComponents.

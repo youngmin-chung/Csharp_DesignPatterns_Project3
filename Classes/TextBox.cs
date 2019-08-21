@@ -1,8 +1,10 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          TextBox.cs
- * Date:            August 19, 2019
+ * Date:            August 7, 2019
  * Author:          Youngmin Chung
+ * Summary:         a simple class that inherits from FormComponent. 
+ *                  Its name is set by the main method and its value is set by the InputState.
  * Description:     As ConcreteColleague, TextBox class do...
  *                  - we pass in the userInput     
  */
