@@ -1,8 +1,11 @@
 /*
  * Program:         Assi3.exe
  * Module:          Form.cs
- * Date:            August 5, 2019
+ * Date:            August 19, 2019
  * Author:          Youngmin Chung
+ * Requirement:     Your Form should act as a mediator for its FormComponent colleagues. 
+ *                  Because there is no interaction between FormComponent elements, 
+ *                  the Mediator/Form will basically just be a list of FormComponents.
  * Description:     As Mediator, Form class defines an interface for communicating with Colleague objects     
  */
 
@@ -33,8 +36,10 @@ namespace Assi3
         public string Print()
         {
             string print = "";
-            foreach (FormComponent component in _components)
-                print = print + component.GetName() + ": " + component.GetValue() + "\n";
+            for (int i = 0; i < _components.Count; i++)
+            {
+                print = print + _components[i].GetName() + ": " + _components[i].GetName() + "\n";
+            }
             return print;
         }
     }

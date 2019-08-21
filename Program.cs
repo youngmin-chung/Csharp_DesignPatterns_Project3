@@ -1,8 +1,10 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          Program.cs
- * Date:            August 5, 2019
+ * Date:            August 19, 2019
  * Author:          Youngmin Chung
+ * Requirement:     To properly program the State, you will need a second "Main" class outside your main method. 
+ *                  Your main method should create a Main class and call a function on it; nothing else.
  * Description:     To properly program the State, you will need a second "Main" class outside your main method. 
  *                  Your main method should create a Main class and call a function on it; nothing else.      
  */
@@ -22,7 +24,7 @@ namespace Assi3
 
         public void Run(Form form) {
             this.form = form;
-            SetState((IState)new InputState(this));
+            SetState(new InputState(this));
         }
 
         public void SetState(IState state)
@@ -79,7 +81,6 @@ namespace Assi3
                     new TextBox("Age")
                 )
             );
-
 
             new StateContext().Run(form);
         }

@@ -1,7 +1,7 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          FormComponent.cs
- * Date:            August 5, 2019
+ * Date:            August 19, 2019
  * Author:          Youngmin Chung
  * Description:     As AbstractColleague, FormComponent class...      
  *                  And here, we define a few variables, and the name. 
@@ -16,7 +16,7 @@ namespace Assi3.Classes
     {
         protected string _name;
         protected string _value;
-        protected FormComponent _parent;
+        protected FormComponent _component;
 
         public FormComponent(string name)
         {
@@ -31,15 +31,15 @@ namespace Assi3.Classes
 
         public string GetValue()
         {
-            if (_parent != null)
-                return _parent.GetValue();
+            if (_component != null)
+                return _component.GetValue();
             return _value;
         }
 
         public void SetValue(string value)
         {
-            if (_parent != null)
-                _parent.SetValue(value);
+            if (_component != null)
+                _component.SetValue(value);
             else
                 _value = value;
         }

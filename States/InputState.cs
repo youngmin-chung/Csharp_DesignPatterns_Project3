@@ -1,12 +1,13 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          InputState.cs
- * Date:            August 5, 2019
+ * Date:            August 19, 2019
  * Author:          Youngmin Chung
+ * Requirement:     Implement the State pattern with two states - "Entering Form Inputs" and "Done Form".
+ *                  Your state should process user input
  * Description:     As ConcreateState, each subclass implements a behavior associated with a state of the Context      
  */
 
-using Assi3.Classes;
 using Assi3.States;
 using System;
 
@@ -17,26 +18,29 @@ namespace Assi3
         private StateContext _context;
         string userInput1 = "", userInput2 = "", state;
 
-        public InputState(StateContext main)
+        public InputState(StateContext context)
         {
-            _context = main;
+            _context = context;
         }
 
         public void Run()
         {
             Console.WriteLine("Welcome to the Form. @2019 Copyright - Youngmin Chung");
-            foreach (FormComponent component in _context.GetForm().GetComponents())
+
+            // You shouldn't need a while loop for overall user input 
+            // (except in one or two small places, for example making sure a user input is valid).
+            for (int i = 0; i < _context.GetForm().GetComponents().Count; i++)
             {
-                Console.WriteLine(component.GetName() + ":");
+                Console.WriteLine(_context.GetForm().GetComponents()[i].GetName() + ":");
                 Console.Write("> ");
                 userInput1 = Console.ReadLine();
-                component.SetValue(userInput1);
-                while (!component.IsValid())
+                _context.GetForm().GetComponents()[i].SetValue(userInput1);
+                while (!_context.GetForm().GetComponents()[i].IsValid())
                 {
                     Console.WriteLine("Invalid entry, try again:");
                     Console.Write("> ");
                     userInput2 = Console.ReadLine();
-                    component.SetValue(userInput2);
+                    _context.GetForm().GetComponents()[i].SetValue(userInput2);
                 }
             }
             Console.WriteLine("\nYou're done! To confirm, here's what you wrote:\n");
@@ -48,7 +52,7 @@ namespace Assi3
             if (state == "reset")
                 Run();
             else
-                _context.SetState((IState)new DoneState(_context));
+                _context.SetState(new DoneState(_context));
         }
     }
 }

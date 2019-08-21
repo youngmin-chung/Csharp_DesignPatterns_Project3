@@ -1,8 +1,10 @@
 ﻿/*
  * Program:         Assi3.exe
  * Module:          NumberValidator.cs
- * Date:            August 5, 2019
+ * Date:            August 19, 2019
  * Author:          Youngmin Chung
+ * Requirement:     Your FormComponents should have Validator decorators. Each decorator is meant to change the form input's 
+ *                  validation - for example, a MinLengthDecorator or HasCharacterDecorator, etc. would be good ideas. 
  * Description:     As ConcreteColleague, NumberValidator class do...
  *                  And here in the Constructor we pass in the name, 
  *                  and right below that we have the IsValid(), which valids out GetValue() contains numeric value or not           
@@ -14,9 +16,9 @@ namespace Assi3.Validators
 {
     class NumberValidator : FormComponent
     {
-        public NumberValidator(FormComponent parent) : base(parent.GetName())
+        public NumberValidator(FormComponent component) : base(component.GetName())
         {
-            _parent = parent;
+            _component = component;
         }
 
         public override bool IsValid()
@@ -24,7 +26,7 @@ namespace Assi3.Validators
             int result;
             if (!int.TryParse(GetValue(), out result))
                 return false;
-            return _parent.IsValid();
+            return _component.IsValid();
         }
     }
 }
