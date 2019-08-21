@@ -40,7 +40,7 @@ namespace Assi3
             string print = "";
             for (int i = 0; i < _components.Count; i++)
             {
-                print = print + _components[i].GetName() + ": " + _components[i].GetName() + "\n";
+                print = print + _components[i].GetName() + ": " + _components[i].GetValue() + "\n";
             }
             return print;
         }
